@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Speed Typing Game</title>
+</head>
+<body>
+    
+    <div class="container-select">
+        <div class="select-container">
+            <h1>Typing Tester</h1>
+            <select id="level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <h3>Type the given words within <span class="time">5</span> seconds</h3>
+        <h1 class="words">Word</h1>
+        <input type="text" class="words-input" placeholder="Start Typing..." disabled>
+        <p class="correct">Correct!</p>
+        <button class="startgame">Start Game</button>
+        <p class="over">Game Over!!!</p>
+    </div>
+
+    <div class="time-container">
+        <div>
+            <p>time left: <span class="time-check">0</span></p>
+            <p>score: <span class="score">0</span></p>
+        </div>
+    </div>
+
+    <div class="high-score-container">
+        <button class="show-modal">high score</button>
+
+        <div class="container">
+            <p class="close-modal">&times;</p>
+            
+            <div>
+                <h2>high scores</h2>
+                <p>Easy: <span class="easy-highscore">0</span></p>
+                <p>Medium: <span class="medium-highscore">0</span></p>
+                <p>Hard: <span class="hard-highscore">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h3>Instruction:</h3>
+        <p>Type each word in the given amount of seconds to score. 
+            Click start game to begin the game, and your score would reset.
+        </p>
+    </div>
+
+    <footer>
+        <div>Copyright &copy; Ghasty, 2022, All rights reservered.</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #955909;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-select {
+  background-color: brown;
+  height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select-container select {
+  border-radius: 3px;
+  padding: 5px;
+  background-color: cadetblue;
+  outline: none;
+  color: white;
+}
+
+.select-container h1 {
+  color: white;
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.input-container h3, .input-container h1 {
+  margin-bottom: 13px;
+}
+
+.input-container h3 {
+  color: #fcf6eb;
+  font-size: 20px;
+}
+
+.input-container h3 .time {
+  color: #e40000;
+}
+
+.input-container h1 {
+  color: dodgerblue;
+}
+
+.input-container input {
+  text-align: center;
+  font-size: 15px;
+  outline: none;
+  width: 370px;
+  padding: .5em;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.input-container button {
+  background-color: dodgerblue;
+  padding: .8em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.input-container .correct {
+  color: lime;
+  font-size: 19px;
+  margin-bottom: 5px;
+  display: none;
+  -webkit-animation-name: correct;
+          animation-name: correct;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+.input-container p:last-child {
+  color: #e40000;
+  font-size: 1.5em;
+  margin-top: 15px;
+  display: none;
+  -webkit-animation: over 1s;
+          animation: over 1s;
+}
+
+@-webkit-keyframes over {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes over {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes correct {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes correct {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.time-container div {
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.time-container div p {
+  text-transform: capitalize;
+  font-size: 1em;
+  color: white;
+}
+
+.high-score-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 60px;
+}
+
+.high-score-container button {
+  background-color: inherit;
+  border: 2px solid #e40000;
+  padding: .5em;
+  width: 100px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: .8em;
+}
+
+.high-score-container .container {
+  background-color: brown;
+  width: 350px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 5px;
+  position: fixed;
+  display: none;
+  top: 30%;
+  -webkit-animation: modal 1s;
+          animation: modal 1s;
+}
+
+.high-score-container .container > p {
+  color: white;
+  font-size: 25px;
+  border: 1px solid #e40000;
+  width: 10%;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.high-score-container .container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.high-score-container .container div h2 {
+  color: slateblue;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.high-score-container .container div p {
+  color: white;
+  margin-bottom: 25px;
+}
+
+@-webkit-keyframes modal {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes modal {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.instructions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: brown;
+  text-align: center;
+  width: 300px;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.instructions h3 {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.instructions p {
+  color: white;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+footer div {
+  text-align: center;
+  color: white;
+  word-spacing: 3px;
+}
+
+@media screen and (max-width: 800px) {
+  .container-select {
+    height: 4.3em;
+  }
+  .select-container h1 {
+    font-size: 1.5em;
+  }
+  .time-container div {
+    width: 70%;
+  }
+  .input-container input {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
