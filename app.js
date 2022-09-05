@@ -12,7 +12,7 @@ const showModal = document.querySelector(".show-modal");
 const closeModal = document.querySelector(".close-modal");
 const modalContainer = document.querySelector(".container");
 startgame.addEventListener("click", startGame);
-level.addEventListener("click", checkLevelPicked);
+level.addEventListener("change", checkLevelPicked);
 function startGame() {
     startgame.style.opacity = '0';
     setTimeout(() => {
