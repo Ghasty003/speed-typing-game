@@ -16,7 +16,7 @@ const modalContainer = document.querySelector(".container") as HTMLDivElement;
 //Initialize game.
 
 startgame.addEventListener("click", startGame)
-level.addEventListener("click", checkLevelPicked);
+level.addEventListener("change", checkLevelPicked);
 
 function startGame():void {
 
