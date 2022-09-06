@@ -1,5 +1,5 @@
 # speed typing game
  web based speed typing game
 
-#Local
+# Local
 It uses
